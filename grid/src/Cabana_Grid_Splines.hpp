@@ -761,8 +761,9 @@ struct Spline<5>
 
         // Knot at i - 1
         gradients[1] =
-            ( -75.0 + xn *
-              ( 168.0 + xn * ( -72.0 + xn * ( -96.0 + xn * ( 80.0 ) ) ) ) ) *
+            ( -75.0 +
+              xn * ( 168.0 +
+                     xn * ( -72.0 + xn * ( -96.0 + xn * ( 80.0 ) ) ) ) ) *
             denom_2 * rdx;
 
         // Knot at i
@@ -780,8 +781,9 @@ struct Spline<5>
 
         // Knot at i + 2
         gradients[4] =
-            ( 75.0 + xn *
-              ( 168.0 + xn * ( 72.0 + xn * ( -96.0 + xn * ( -80.0 ) ) ) ) ) *
+            ( 75.0 +
+              xn * ( 168.0 +
+                     xn * ( 72.0 + xn * ( -96.0 + xn * ( -80.0 ) ) ) ) ) *
             denom_2 * rdx;
 
         // Knot at i + 3
